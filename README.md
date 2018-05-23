@@ -25,7 +25,7 @@ Start server up with [PM2](https://github.com/Unitech/pm2)
 ![alt text](https://i.imgur.com/6jvByL2.png "Logo Title Text 1")
 
 ## CSS
-To make this work on reddit you need to add the css you need here a little example on how this one works. Or check out the full css [here]().
+To make this work on reddit you need to add the css here a little example on how this one works.
 
 ```CSS
 /* PRICE TICKER CSS */
