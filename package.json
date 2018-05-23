@@ -1,8 +1,8 @@
 {
-  "name": "nanotheme",
+  "name": "nanotheme_server",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A server for putting data into a subreddit https://www.reddit.com/r/nanotrade",
+  "main": "srv.js",
   "dependencies": {
     "dotenv": "^5.0.0",
     "snoowrap": "^1.15.2"
@@ -11,6 +11,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "greeb",
   "license": "ISC"
 }
