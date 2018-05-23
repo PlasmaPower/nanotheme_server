@@ -5,6 +5,7 @@ require('dotenv').config()
 
 //get credentials from .env file
 const r = new snoowrap({userAgent: process.env.REDDIT_USERAGENT,clientId: process.env.REDDIT_CLIENTID,clientSecret: process.env.REDDIT_CLIENTSECRET,username: process.env.REDDIT_USERNAME,password: process.env.REDDIT_PASSWORD});
+var subbredit = "nanotrade" //the subreddit you want to run this on
 var url = process.env.CMC_API_URI; //api for new data url https://api.coinmarketcap.com/v1/ticker/nano/
 var rs = "6092516286"; //just a random number to make it unique in the description of the subreddit
 var minutes = 5, the_interval = minutes * 60 * 1000; //interval for the hole function
@@ -47,7 +48,7 @@ function rawPercentChangeToId(raw) {
 //at last we send the new description to reddit
 //main function for getting the
 setInterval(function() {
-r.getSubreddit('nanotrade').getSettings().then(function(res) {
+r.getSubreddit(subbredit).getSettings().then(function(res) {
   var des = res.description.split('\n'); //split description
 
   //get old info from description
@@ -138,7 +139,7 @@ r.getSubreddit('nanotrade').getSettings().then(function(res) {
       var readyToPush = des.join("\n");
 
       //push new description to REDDIT_CLIENTID
-       r.getSubreddit('nanotrade').editSettings({
+       r.getSubreddit(subreddit).editSettings({
          description: readyToPush
        })
     }
