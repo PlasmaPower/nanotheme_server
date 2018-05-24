@@ -1,16 +1,14 @@
 {
   "name": "nanotheme_server",
   "version": "1.0.0",
-  "description": "A server for putting data into a subreddit https://www.reddit.com/r/nanotrade",
+  "description": "Edits nano subreddits' sidebars to add real time info.",
   "main": "srv.js",
+  "private": true,
   "dependencies": {
-    "dotenv": "^5.0.0",
+    "node-fetch": "^2.1.2",
     "snoowrap": "^1.15.2"
   },
   "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "greeb",
+  "author": "Lee Bousfield <ljbousfield@gmail.com>",
   "license": "ISC"
 }
